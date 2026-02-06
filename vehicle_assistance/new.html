@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== FAVICON ===============-->
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+    <!--=============== BOXICONS ===============-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+    <!--=============== SWIPER CSS ===============--> 
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <title>Vehicle Service Application</title>
+</head>
+<body>
+    <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">
+                <i class='bx bxs-car nav__logo-icon'></i> VehicleService
+            </a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link active-link">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#services" class="nav__link">Services</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#about" class="nav__link">About Us</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#contact" class="nav__link">Contact</a>
+                    </li>
+                </ul>
+
+                <div class="nav__close" id="nav-close">
+                    <i class='bx bx-x'></i>
+                </div>
+            </div>
+
+            <div class="nav__btns">
+                <!-- Theme change button -->
+                <i class='bx bx-moon change-theme' id="theme-button"></i>
+
+                <div class="nav__shop" id="cart-shop">
+                    <i class='bx bx-map'></i>
+                </div>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-grid-alt'></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!--==================== MAIN ====================-->
+    <main class="main">
+        <!--==================== HOME ====================-->
+        <section class="home" id="home">
+            <div class="home__container container grid">
+                <div class="home__img-bg">
+                    <img src="assets/img/home.png" alt="Vehicle Service" class="home__img">
+                </div>
+
+                <div class="home__data">
+                    <h1 class="home__title">Reliable Vehicle Services</h1>
+                    <p class="home__description">
+                        Get prompt and reliable vehicle services including repair, fuel delivery, and maintenance.
+                    </p>
+                    <span class="home__price">24/7 Availability</span>
+
+                    <div class="home__btns">
+                        <a href="#services" class="button button--gray button--small">
+                            Explore Services
+                        </a>
+
+                        <button class="button home__button">Request Service</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--==================== SERVICES ====================-->
+        <section class="services section container" id="services">
+            <h2 class="section__title">
+                Our Services
+            </h2>
+
+            <div class="services__container grid">
+                <article class="services__card">
+                    <img src="assets/img/service1.png" alt="Repair Service" class="services__img">
+                    <h3 class="services__title">Repair Service</h3>
+                    <p class="services__description">
+                        Quick and efficient repair services for all types of vehicles.
+                    </p>
+                </article>
+
+                <article class="services__card">
+                    <img src="assets/img/service2.png" alt="Fuel Delivery" class="services__img">
+                    <h3 class="services__title">Fuel Delivery</h3>
+                    <p class="services__description">
+                        Fuel delivery to your location when you run out of gas.
+                    </p>
+                </article>
+
+                <article class="services__card">
+                    <img src="assets/img/service3.png" alt="Maintenance" class="services__img">
+                    <h3 class="services__title">Maintenance</h3>
+                    <p class="services__description">
+                        Regular maintenance services to keep your vehicle in top condition.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <!--==================== ABOUT ====================-->
+        <section class="about section container" id="about">
+            <h2 class="section__title">
+                About Us
+            </h2>
+
+            <div class="about__container grid">
+                <div class="about__data">
+                    <h1 class="about__title">Your Trusted Vehicle Service Partner</h1>
+                    <p class="about__description">
+                        We are committed to providing top-notch vehicle services with a focus on customer satisfaction. Our team of professionals is here to assist you 24/7.
+                    </p>
+                </div>
+
+                <div class="about__images">
+                    <img src="assets/img/about.png" alt="About Us" class="about__img">
+                </div>
+            </div>
+        </section>
+
+        <!--==================== CONTACT ====================-->
+        <section class="contact section container" id="contact">
+            <h2 class="section__title">
+                Contact Us
+            </h2>
+
+            <div class="contact__container grid">
+                <form action="#" class="contact__form">
+                    <input type="text" placeholder="Your Name" class="contact__input">
+                    <input type="email" placeholder="Your Email" class="contact__input">
+                    <textarea placeholder="Your Message" class="contact__textarea"></textarea>
+                    <button class="button contact__button">Send Message</button>
+                </form>
+
+                <div class="contact__info">
+                    <h3 class="contact__title">Get in Touch</h3>
+                    <p class="contact__description">
+                        Address: 1234 - Service Lane, Auto City <br>
+                        Phone: 123-456-7890 <br>
+                        Email: support@vehicleservice.com
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!--==================== FOOTER ====================-->
+        <footer class="footer section">
+            <div class="footer__container container grid">
+                <div class="footer__content">
+                    <h3 class="footer__title">Contact Information</h3>
+
+                    <ul class="footer__list">
+                        <li>1234 - Service Lane</li>
+                        <li>Auto City, 43210</li>
+                        <li>123-456-7890</li>
+                        <li>support@vehicleservice.com</li>
+                    </ul>
+                </div>
+                <div class="footer__content">
+                    <h3 class="footer__title">About Us</h3>
+
+                    <ul class="footer__links">
+                        <li>
+                            <a href="#about" class="footer__link">About Us</a>
+                        </li>
+                        <li>
+                            <a href="#services" class="footer__link">Services</a>
+                        </li>
+                        <li>
+                            <a href="#contact" class="footer__link">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Follow Us</h3>
+
+                    <ul class="footer__social">
+                        <a href="https://www.facebook.com/" target="_blank" class="footer__social-link">
+                            <i class='bx bxl-facebook'></i>
+                        </a>
+
+                        <a href="https://twitter.com/" target="_blank" class="footer__social-link">
+                            <i class='bx bxl-twitter'></i>
+                        </a>
+
+                        <a href="https://www.instagram.com/" target="_blank" class="footer__social-link">
+                            <i class='bx bxl-instagram'></i>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+
+            <span class="footer__copy">&#169; VehicleService. All rights reserved</span>
+        </footer>
+
+        <!--=============== SCROLL UP ===============-->
+        <a href="#" class="scrollup" id="scroll-up"> 
+            <i class='bx bx-up-arrow-alt scrollup__icon'></i>
+        </a>
+
+        <!--=============== SWIPER JS ===============-->
+        <script src="assets/js/swiper-bundle.min.js"></script>
+
+        <!--=============== MAIN JS ===============-->
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>

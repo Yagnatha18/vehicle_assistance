@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fuel Delivery - Vehicle Assistance</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/fuel.css">
+    <script src="https://js.stripe.com/v3/"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Fuel Delivery Service Section -->
+    <section class="service-details">
+        <div class="container">
+            <h1 class="service-title">Fuel Delivery</h1>
+            <img src="assets/img/fuel.png" alt="Fuel Delivery" class="new__img">
+            <p class="service-description">
+                Running out of fuel? Our fuel delivery service is quick and reliable, ensuring you never get stranded.
+            </p>
+
+            <div class="service-info">
+                <h2>Service Details:</h2>
+                <ul>
+                    <li><strong>Time: </strong>Delivered within 30 minutes</li>
+                    <li><strong>Fuel Types: </strong>Petrol, Diesel</li>
+                    <li><strong>Service Areas: </strong>Citywide coverage</li>
+                </ul>
+            </div>
+
+            <!-- Order Form -->
+            <form id="order-form" class="order-form">
+                <h3>Order Fuel Delivery</h3>
+                <label for="fuel-type">Select Fuel Type:</label>
+                <select name="fuelType" id="fuel-type" required>
+                    <option value="petrol">Petrol</option>
+                    <option value="diesel">Diesel</option>
+                </select>
+            
+                <label for="quantity">Enter Quantity (in liters):</label>
+                <input type="number" id="quantity" name="quantity" min="1" required>
+            
+                <label for="address">Delivery Address:</label>
+                <textarea id="address" name="address" placeholder="Enter your delivery address" required></textarea>
+            
+                <!-- Payment Options -->
+                <h4>Payment Options:</h4>
+                <label for="payment-method">Select Payment Method:</label>
+                <select name="paymentMethod" id="payment-method" required>
+                    <option value="credit-card">Credit Card</option>
+                    <option value="paypal">PayPal</option>
+                    <option value="cash">Cash on Delivery</option>
+                </select>
+            
+                <div id="paypal-button-container"></div>
+            
+                <button type="submit" class="btn-order">Order Now</button>
+            </form>
+            
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Vehicle Assistance. All rights reserved.</p>
+    </footer>
+
+    <!-- Stripe Payment Script -->
+    <script src="assets/js/stripe-payment.js"></script>
+    <script src="assets/js/paypal-payment.js"></script>
+     <script>
+        document.getElementById('order-form').addEventListener('submit', async (e) => {
+    e.preventDefault(); // Prevent the default form submission
+
+    // Collect form data
+    const formData = {
+        fuelType: document.getElementById('fuel-type').value,
+        quantity: document.getElementById('quantity').value,
+        address: document.getElementById('address').value,
+        paymentMethod: document.getElementById('payment-method').value,
+    };
+
+    try {
+        // Send a POST request to the server
+        const response = await fetch('http://localhost:3000/fuel-delivery/order', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData),
+        });
+
+        const result = await response.json();
+
+        if (response.ok) {
+            alert(result.message); // Show a success message
+            window.location.href = 'index.html'; // Redirect to the homepage
+        } else {
+            alert(`Error: ${result.message}`);
+        }
+    } catch (error) {
+        console.error('Error:', error);
+        alert('An unexpected error occurred. Please try again.');
+    }
+});
+
+     </script>
+    
+</body>
+</html>

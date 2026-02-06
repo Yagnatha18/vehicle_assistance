@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome - Vehicle Assistance App</title>
+    <link rel="stylesheet" href="assets/css/welcome.css">
+    <script>
+        // Add JavaScript for additional animations or interactions if necessary
+document.addEventListener("DOMContentLoaded", function() {
+    // Example: Add smooth scroll to sections
+    document.querySelectorAll('.navbar__links a').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+});
+    </script>
+</head>
+<body>
+    <div class="header">
+        <nav class="navbar">
+            <div class="navbar__logo">
+                <img src="assets/img/sport-car.png" alt="" width="30px" height="30px">Vheel
+            </div>
+            <ul class="navbar__links">
+                <li><a href="#about">About</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="signup.html" class="btn--highlight" style="color: #fff;">Sign Up</a></li>
+            </ul>
+        </nav>
+    </div>
+    
+
+    <header class="welcome">
+        <div class="welcome__content">
+            <h2>Welcome to Vehicle Assistance</h2>
+            <p>Your reliable partner for all vehicle-related needs.</p>
+            <div class="welcome__buttons">
+                <!-- <a href="#login" class="btn btn--login">Login</a>
+                <a href="#signup" class="btn btn--signup">Join Now</a> -->
+            </div>
+        </div>
+        <div class="welcome__animation">
+            <img src="assets/img/car1.webp" alt="Car Animation">
+        </div>
+    </header>
+
+    <section class="about" id="about">
+        <h2>About the Application</h2>
+        <p>Our vehicle assistance application provides services such as finding the nearest repair shops, fuel delivery, roadside assistance, spare parts, and towing services. We are here to ensure that your journey is safe and hassle-free.</p>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 Vheel. All rights reserved.</p>
+    </footer>
+</body>
+</html>

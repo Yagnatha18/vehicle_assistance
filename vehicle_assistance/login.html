@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+<html>
+<head>
+  <title>Login</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="assets/css/login_style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>  
+  <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'> 
+  <!-- <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script> -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+</head>
+
+<body class="body">
+	
+	
+
+<div class="login-page">
+  <div class="form">
+
+    
+    <form id="login-form">
+      <img src="assets/img/user.png" alt="" height="130px">
+      <input type="text" placeholder="&#xf007;  username" id="username"/>
+      <input type="password" id="password" placeholder="&#xf023;  password"/>
+      <i class="fas fa-eye" onclick="show()"></i> 
+      <br><br>
+      <button type="button">LOGIN</button>
+      <p class="message"></p>
+  </form>
+  
+
+    <form class="login-form">
+      <button type="button" onclick="window.location.href='signup.html'">SIGN UP</button>
+    </form>
+  </div>
+</div>
+
+<script>
+  document.querySelector('#login-form button').addEventListener('click', async () => {
+    const username = document.querySelector('#username').value;
+    const password = document.querySelector('#password').value;
+
+    console.log('Attempting login with username:', username);
+
+    try {
+        const response = await fetch('http://localhost:3000/auth/login', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ username, password }),
+        });
+
+        console.log('Response status:', response.status);
+
+        const data = await response.json();
+        if (response.ok) {
+            console.log('Login successful, token:', data.token);
+            localStorage.setItem('token', data.token);
+            alert('Login successful');
+            window.location.href = 'index.html'; // Redirect to index.html
+        } else {
+            console.error('Login failed:', data.message);
+            alert(data.message);
+        }
+    } catch (error) {
+        console.error('Error during login:', error);
+        alert('Error during login');
+    }
+});
+
+
+  function show() {
+    var password = document.getElementById("password");
+    var icon = document.querySelector(".fas");
+
+    // ========== Checking type of password ===========
+    if (password.type === "password") {
+      password.type = "text";
+    } else {
+      password.type = "password";
+    }
+  }
+</script>
+
+</body>
+</html>
+

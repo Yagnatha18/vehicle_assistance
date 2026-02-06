@@ -1,0 +1,155 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f7f7f7;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Navbar */
+.header{
+    position: fixed;
+    width: 100%;
+}
+.header .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background-color: white;
+    color: #2B323E;
+}
+.navbar__logo{
+    text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+  display: inline-flex;
+  align-items: center;
+  column-gap: .25rem;
+}
+
+
+.navbar__links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar__links li {
+    display: inline;
+}
+
+.navbar__links li a {
+    color:#2B323E ;
+    padding: 8px 12px;
+    transition: background 0.3s;
+}
+
+.navbar__links li a:hover {
+    background-color: #2B323E;
+    color: #fff;
+    border-radius: 4px;
+}
+
+.btn--highlight {
+    background-color: #2B323E;
+
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+
+/* Welcome Section */
+.welcome {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 100px 10%;
+    background: linear-gradient(to right, #2B323E, #7C8596);
+    color: #fff;
+}
+
+.welcome__content {
+    max-width: 50%;
+}
+
+.welcome__content h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.welcome__content p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+}
+
+.welcome__buttons .btn {
+    padding: 12px 24px;
+    border-radius: 4px;
+    color: #fff;
+    margin-right: 20px;
+    transition: transform 0.3s;
+}
+
+.btn--login {
+    background-color: #000003;
+}
+
+.btn--signup {
+    background-color: #f41cb2;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+/* Animation Section */
+.welcome__animation img {
+    position: relative;
+    width: 400px;
+    height: auto;
+    animation: moveCar 5s infinite alternate;
+}
+
+@keyframes moveCar {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(20px);
+    }
+}
+
+/* About Section */
+.about {
+    padding: 60px 10%;
+    background-color: #fff;
+    color: #2B323E;
+}
+
+.about h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.about p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Footer */
+.footer {
+    padding: 20px 10%;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}

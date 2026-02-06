@@ -1,0 +1,836 @@
+ <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--=============== FAVICON ===============-->
+        <!-- <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon"> -->
+
+        <!--=============== BOXICONS ===============-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+        <!--=============== SWIPER CSS ===============--> 
+        <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
+        <!--=============== CSS ===============-->
+        <link rel="stylesheet" href="assets/css/styles.css">
+
+        <title>Vheel</title>
+    </head>
+    <body>
+        <!--==================== HEADER ====================-->
+        <header class="header" id="header">
+            <nav class="nav container">
+                <a href="#" class="nav__logo">
+                    <!-- <i class='bx bxs-watch nav__logo-icon'></i> -->
+                    <img src="assets/img/sport-car.png" alt="" width="30px" height="30px"> Vheel
+                </a>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="#home" class="nav__link active-link">Home</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#featured" class="nav__link">Featured</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#new" class="nav__link">Services</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#contact" class="nav__link">Contact</a>
+                        </li>
+                        
+                    </ul>
+
+                    <div class="nav__close" id="nav-close">
+                        <i class='bx bx-x' ></i>
+                    </div>
+                </div>
+
+                <div class="nav__btns">
+                    <!-- Theme change button -->
+                    <i class='bx bx-moon change-theme' id="theme-button"></i>
+
+                    <div class="nav__shop" id="cart-shop">
+                        <i class='bx bx-shopping-bag' ></i>
+                    </div>
+
+                    <div class="nav__toggle" id="nav-toggle">
+                        <i class='bx bx-grid-alt' ></i>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!--==================== CART ====================-->
+        <div class="cart" id="cart">
+            <i class='bx bx-x cart__close' id="cart-close"></i>
+
+            <h2 class="cart__title-center">My Cart</h2>
+
+            <div class="cart__container">
+                <article class="cart__card">
+                    <div class="cart__box">
+                        <img src="assets/img/featured1.png" alt="" class="cart__img">
+                    </div>
+
+                    <div class="cart__details">
+                        <h3 class="cart__title">Jazzmaster</h3>
+                        <span class="cart__price">$1050</span>
+
+                        <div class="cart__amount">
+                            <div class="cart__amount-content">
+                                <span class="cart__amount-box">
+                                    <i class='bx bx-minus' ></i>
+                                </span>
+
+                                <span class="cart__amount-number">1</span>
+
+                                <span class="cart__amount-box">
+                                    <i class='bx bx-plus' ></i>
+                                </span>
+                            </div>
+
+                            <i class='bx bx-trash-alt cart__amount-trash' ></i>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="cart__card">
+                    <div class="cart__box">
+                        <img src="assets/img/featured3.png" alt="" class="cart__img">
+                    </div>
+
+                    <div class="cart__details">
+                        <h3 class="cart__title">Rose Gold</h3>
+                        <span class="cart__price">$850</span>
+
+                        <div class="cart__amount">
+                            <div class="cart__amount-content">
+                                <span class="cart__amount-box">
+                                    <i class='bx bx-minus' ></i>
+                                </span>
+
+                                <span class="cart__amount-number">1</span>
+
+                                <span class="cart__amount-box">
+                                    <i class='bx bx-plus' ></i>
+                                </span>
+                            </div>
+
+                            <i class='bx bx-trash-alt cart__amount-trash' ></i>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="cart__card">
+                    <div class="cart__box">
+                        <img src="assets/img/new1.png" alt="" class="cart__img">
+                    </div>
+
+                    <div class="cart__details">
+                        <h3 class="cart__title">Longines Rose</h3>
+                        <span class="cart__price">$980</span>
+
+                        <div class="cart__amount">
+                            <div class="cart__amount-content">
+                                <span class="cart__amount-box">
+                                    <i class='bx bx-minus' ></i>
+                                </span>
+
+                                <span class="cart__amount-number">1</span>
+
+                                <span class="cart__amount-box">
+                                    <i class='bx bx-plus' ></i>
+                                </span>
+                            </div>
+
+                            <i class='bx bx-trash-alt cart__amount-trash' ></i>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="cart__prices">
+                <span class="cart__prices-item">3 items</span>
+                <span class="cart__prices-total">$2880</span>
+            </div>
+        </div>
+
+        <!--==================== MAIN ====================-->
+        <main class="main">
+            <!--==================== HOME ====================-->
+            <section class="home" id="home">
+                <div class="home__container container grid">
+                    <div class="home__img-bg">
+                        <img src="assets/img/car.jpg" alt="" class="home__img">
+                    </div>
+    
+                    <div class="home__social">
+                        <a href="https://www.facebook.com/" target="_blank" class="home__social-link">
+                            Facebook
+                        </a>
+                        <a href="https://twitter.com/" target="_blank" class="home__social-link">
+                            Twitter
+                        </a>
+                        <a href="https://www.instagram.com/" target="_blank" class="home__social-link">
+                            Instagram
+                        </a>
+                    </div>
+    
+                    <div class="home__data">
+                        <h1 class="home__title">Vehicle Assistance <br> Whenever You Need It</h1>
+                        <p class="home__description">
+                            Our application provides reliable and quick services including fuel delivery, roadside assistance, 
+                            spare parts, and towing. Stay safe and get the help you need with just a tap.
+                        </p>
+                        <span class="home__price">Available 24/7</span>
+            
+                        <div class="home__btns">
+                            <a href="#services" class="button button--gray button--small">
+                                Explore Services
+                            </a>
+            
+                            <button class="button home__button">Get Assistance</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== FEATURED ====================-->
+            <section class="featured section container" id="featured">
+                <h2 class="section__title">
+                    Featured
+                </h2>
+
+                <div class="featured__container grid">
+                    <article class="featured__card">
+                        
+
+                        <img src="assets/img/better_drives.png" alt="" class="featured__img">
+
+                        <div class="featured__data">
+                            <h3 class="featured__title">Better Drives</h3>
+                            <span class="featured__price">Look forward to traveling with real-­time maps, hands-free driving, off-road upgrades and more.</span>
+                        </div>
+
+                        <!-- <button class="button featured__button">ADD TO CART</button> -->
+                    </article>
+
+                    <article class="featured__card">
+                        
+
+                        <img src="assets/img/protection.png" alt="" class="featured__img">
+
+                        <div class="featured__data">
+                            <h3 class="featured__title">Better Safety</h3>
+                            <span class="featured__price">Help when you need it — in your vehicle, on your phone and at home.</span>
+                        </div>
+
+                        <!-- <button class="button featured__button">ADD TO CART</button> -->
+                    </article>
+
+                    <article class="featured__card">
+                       
+
+                        <img src="assets/img/better_control.png" alt="" class="featured__img">
+
+                        <div class="featured__data">
+                            <h3 class="featured__title">Better Control</h3>
+                            <span class="featured__price">Connect to your vehicle from anywhere using remote commands through the vehicle mobile app.</span>
+                        </div>
+
+                        <!-- <button class="button featured__button">ADD TO CART</button> -->
+                    </article>
+                </div>
+            </section>
+
+            <!--==================== STORY ====================-->
+            <!-- <section class="story section container">
+                <div class="story__container grid">
+                    <div class="story__data">
+                        <h2 class="section__title story__section-title">
+                            Our Story
+                        </h2>
+    
+                        <h1 class="story__title">
+                            Inspirational Watch of <br> this year
+                        </h1>
+    
+                        <p class="story__description">
+                            The latest and modern watches of this year, is available in various 
+                            presentations in this store, discover them now.
+                        </p>
+    
+                        <a href="#" class="button button--small">Discover</a>
+                    </div>
+
+                    <div class="story__images">
+                        <img src="assets/img/car.jpg" alt="" class="story__img">
+                        <div class="story__square"></div>
+                    </div>
+                </div>
+            </section> -->
+            <section class="story section container">
+                <div class="story__container grid">
+                    <div class="story__data">
+                        <h2 class="section__title story__section-title">
+                            Our Mission
+                        </h2>
+            
+                        <h1 class="story__title">
+                            Reliable Assistance Whenever <br> You Need It
+                        </h1>
+            
+                        <p class="story__description">
+                            At VHEEL, we provide essential vehicle assistance services including roadside help, fuel delivery, spare parts, and towing. Our goal is to ensure you're never stranded and always have support when you need it most.
+                        </p>
+            
+                        <a href="#" class="button button--small">Learn More</a>
+                    </div>
+            
+                    <div class="story__images">
+                        <img src="assets/img/car1.jpeg" alt="Roadside Assistance" class="story__img" >
+                        <div class="story__square"></div>
+                    </div>
+                </div>
+            </section>
+            
+
+            <!--==================== PRODUCTS ====================-->
+            <!-- <section class="products section container" id="products">
+                <h2 class="section__title">
+                    Products
+                </h2>
+
+                <div class="products__container grid">
+                    <article class="products__card">
+                        <img src="assets/img/product1.png" alt="" class="products__img">
+
+                        <h3 class="products__title">Spirit rose</h3>
+                        <span class="products__price">$1500</span>
+
+                        <button class="products__button">
+                            <i class='bx bx-shopping-bag'></i>
+                        </button>
+                    </article>
+
+                    <article class="products__card">
+                        <img src="assets/img/product2.png" alt="" class="products__img">
+
+                        <h3 class="products__title">Khaki pilot</h3>
+                        <span class="products__price">$1350</span>
+
+                        <button class="products__button">
+                            <i class='bx bx-shopping-bag'></i>
+                        </button>
+                    </article>
+
+                    <article class="products__card">
+                        <img src="assets/img/product3.png" alt="" class="products__img">
+
+                        <h3 class="products__title">Jubilee black</h3>
+                        <span class="products__price">$870</span>
+
+                        <button class="products__button">
+                            <i class='bx bx-shopping-bag'></i>
+                        </button>
+                    </article>
+
+                    <article class="products__card">
+                        <img src="assets/img/product4.png" alt="" class="products__img">
+
+                        <h3 class="products__title">Fosil me3</h3>
+                        <span class="products__price">$650</span>
+
+                        <button class="products__button">
+                            <i class='bx bx-shopping-bag'></i>
+                        </button>
+                    </article>
+
+                    <article class="products__card">
+                        <img src="assets/img/product5.png" alt="" class="products__img">
+
+                        <h3 class="products__title">Duchen</h3>
+                        <span class="products__price">$950</span>
+
+                        <button class="products__button">
+                            <i class='bx bx-shopping-bag'></i>
+                        </button>
+                    </article>
+                </div>
+            </section> -->
+            <section class="track-orders section container" id="track-orders">
+                <h2 class="section__title">
+                    Track Your Orders
+                </h2>
+            
+                <div class="track-orders__container grid">
+                    <article class="track-orders__card">
+                        <img src="assets/img/track.png" alt="Track Orders" class="track-orders__img">
+            
+                        <!-- <h3 class="track-orders__title">Track Your Orders</h3> -->
+                        <p class="track-orders__description">
+                            Stay updated with the status of your orders in real-time. Enter your order number below to track the delivery progress and get the latest updates.
+                        </p>
+            
+                        <button class="track-orders__button">
+                            Track Now
+                        </button>
+                    </article>
+                </div>
+            </section>
+            
+            <!--==================== TESTIMONIAL ====================-->
+            <!-- <section class="testimonial section container">
+                <div class="testimonial__container grid">
+                    <div class="swiper testimonial-swiper">
+                        <div class="swiper-wrapper">
+                            <div class="testimonial__card swiper-slide">
+                                <div class="testimonial__quote">
+                                    <i class='bx bxs-quote-alt-left' ></i>
+                                </div>
+                                <p class="testimonial__description">
+                                    They are the best watches that one acquires, also they are always with the latest 
+                                    news and trends, with a very comfortable price and especially with the attention 
+                                    you receive, they are always attentive to your questions.
+                                </p>
+                                <h3 class="testimonial__date">March 27. 2021</h3>
+        
+                                <div class="testimonial__perfil">
+                                    <img src="assets/img/testimonial1.jpg" alt="" class="testimonial__perfil-img">
+        
+                                    <div class="testimonial__perfil-data">
+                                        <span class="testimonial__perfil-name">Lee Doe</span>
+                                        <span class="testimonial__perfil-detail">Director of a company</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="testimonial__card swiper-slide">
+                                <div class="testimonial__quote">
+                                    <i class='bx bxs-quote-alt-left' ></i>
+                                </div>
+                                <p class="testimonial__description">
+                                    They are the best watches that one acquires, also they are always with the latest 
+                                    news and trends, with a very comfortable price and especially with the attention 
+                                    you receive, they are always attentive to your questions.
+                                </p>
+                                <h3 class="testimonial__date">March 27. 2021</h3>
+        
+                                <div class="testimonial__perfil">
+                                    <img src="assets/img/testimonial2.jpg" alt="" class="testimonial__perfil-img">
+        
+                                    <div class="testimonial__perfil-data">
+                                        <span class="testimonial__perfil-name">Samantha Mey</span>
+                                        <span class="testimonial__perfil-detail">Director of a company</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="testimonial__card swiper-slide">
+                                <div class="testimonial__quote">
+                                    <i class='bx bxs-quote-alt-left' ></i>
+                                </div>
+                                <p class="testimonial__description">
+                                    They are the best watches that one acquires, also they are always with the latest 
+                                    news and trends, with a very comfortable price and especially with the attention 
+                                    you receive, they are always attentive to your questions.
+                                </p>
+                                <h3 class="testimonial__date">March 27. 2021</h3>
+        
+                                <div class="testimonial__perfil">
+                                    <img src="assets/img/testimonial3.jpg" alt="" class="testimonial__perfil-img">
+        
+                                    <div class="testimonial__perfil-data">
+                                        <span class="testimonial__perfil-name">Raul Zaman</span>
+                                        <span class="testimonial__perfil-detail">Director of a company</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="swiper-button-next">
+                            <i class='bx bx-right-arrow-alt' ></i>
+                        </div>
+                        <div class="swiper-button-prev">
+                            <i class='bx bx-left-arrow-alt' ></i>
+                        </div>
+                    </div>
+
+                    <div class="testimonial__images">
+                        <div class="testimonial__square"></div>
+                        <img src="assets/img/testimonial.png" alt="" class="testimonial__img">
+                    </div>
+                </div>
+            </section> -->
+            <section class="testimonial section container">
+                <div class="testimonial__container grid">
+                    <div class="swiper testimonial-swiper">
+                        <div class="swiper-wrapper">
+                            <div class="testimonial__card swiper-slide">
+                                <div class="testimonial__quote">
+                                    <i class='bx bxs-quote-alt-left'></i>
+                                </div>
+                                <p class="testimonial__description">
+                                    "The vehicle assistance service is outstanding! The support team is quick to respond and 
+                                    always ready to help with fuel delivery, roadside assistance, and more. Highly recommend 
+                                    for anyone in need of reliable vehicle support."
+                                </p>
+                                <h3 class="testimonial__date">August 15. 2024</h3>
+            
+                                <div class="testimonial__perfil">
+                                    <img src="assets/img/testimonial1.jpg" alt="Customer 1" class="testimonial__perfil-img">
+            
+                                    <div class="testimonial__perfil-data">
+                                        <span class="testimonial__perfil-name">Alex Johnson</span>
+                                        <span class="testimonial__perfil-detail">Satisfied Customer</span>
+                                    </div>
+                                </div>
+                            </div>
+            
+                            <div class="testimonial__card swiper-slide">
+                                <div class="testimonial__quote">
+                                    <i class='bx bxs-quote-alt-left'></i>
+                                </div>
+                                <p class="testimonial__description">
+                                    "The service was incredibly helpful during my breakdown. They arrived quickly and handled 
+                                    everything with professionalism. The fuel delivery and towing options are a lifesaver!"
+                                </p>
+                                <h3 class="testimonial__date">August 10. 2024</h3>
+            
+                                <div class="testimonial__perfil">
+                                    <img src="assets/img/testimonial2.jpg" alt="Customer 2" class="testimonial__perfil-img">
+            
+                                    <div class="testimonial__perfil-data">
+                                        <span class="testimonial__perfil-name">Jordan Lee</span>
+                                        <span class="testimonial__perfil-detail">Frequent User</span>
+                                    </div>
+                                </div>
+                            </div>
+            
+                            <div class="testimonial__card swiper-slide">
+                                <div class="testimonial__quote">
+                                    <i class='bx bxs-quote-alt-left'></i>
+                                </div>
+                                <p class="testimonial__description">
+                                    "Exceptional service! The app is easy to use and the response time is fast. Whether you need 
+                                    spare parts or roadside assistance, they have you covered."
+                                </p>
+                                <h3 class="testimonial__date">August 5. 2024</h3>
+            
+                                <div class="testimonial__perfil">
+                                    <img src="assets/img/testimonial3.jpg" alt="Customer 3" class="testimonial__perfil-img">
+            
+                                    <div class="testimonial__perfil-data">
+                                        <span class="testimonial__perfil-name">Taylor Smith</span>
+                                        <span class="testimonial__perfil-detail">Regular User</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <div class="swiper-button-next">
+                            <i class='bx bx-right-arrow-alt'></i>
+                        </div>
+                        <div class="swiper-button-prev">
+                            <i class='bx bx-left-arrow-alt'></i>
+                        </div>
+                    </div>
+            
+                    <div class="testimonial__images">
+                        <div class="testimonial__square"></div>
+                        <img src="assets/img/bike.jpg" alt="Testimonial" class="testimonial__img">
+                    </div>
+                </div>
+            </section>
+            
+
+            <!--==================== NEW ====================-->
+            <!-- <section class="new section container" id="new">
+                <h2 class="section__title">
+                    New Arrivals
+                </h2>
+                
+                <div class="new__container">
+                    <div class="swiper new-swiper">
+                        <div class="swiper-wrapper">
+                            <article class="new__card swiper-slide">
+                                <span class="new__tag">New</span>
+        
+                                <img src="assets/img/new1.png" alt="" class="new__img">
+        
+                                <div class="new__data">
+                                    <h3 class="new__title">Longines rose</h3>
+                                    <span class="new__price">$980</span>
+                                </div>
+        
+                                <button class="button new__button">ADD TO CART</button>
+                            </article>
+
+                            <article class="new__card swiper-slide">
+                                <span class="new__tag">New</span>
+        
+                                <img src="assets/img/new2.png" alt="" class="new__img">
+        
+                                <div class="new__data">
+                                    <h3 class="new__title">Jazzmaster</h3>
+                                    <span class="new__price">$1150</span>
+                                </div>
+        
+                                <button class="button new__button">ADD TO CART</button>
+                            </article>
+
+                            <article class="new__card swiper-slide">
+                                <span class="new__tag">New</span>
+        
+                                <img src="assets/img/new3.png" alt="" class="new__img">
+        
+                                <div class="new__data">
+                                    <h3 class="new__title">Dreyfuss gold</h3>
+                                    <span class="new__price">$750</span>
+                                </div>
+        
+                                <button class="button new__button">ADD TO CART</button>
+                            </article>
+
+                            <article class="new__card swiper-slide">
+                                <span class="new__tag">New</span>
+        
+                                <img src="assets/img/new4.png" alt="" class="new__img">
+        
+                                <div class="new__data">
+                                    <h3 class="new__title">Portuguese rose</h3>
+                                    <span class="new__price">$1590</span>
+                                </div>
+        
+                                <button class="button new__button">ADD TO CART</button>
+                            </article>                       
+                        </div>
+                    </div>
+                </div>
+            </section> -->
+            <section class="new section container" id="new">
+                <h2 class="section__title">
+                    Our Services
+                </h2>
+                
+                <div class="new__container">
+                    <div class="swiper new-swiper">
+                        <div class="swiper-wrapper">
+                            <article class="new__card swiper-slide">
+                                <span class="new__tag">Service</span>
+            
+                                <img src="assets/img/fuel.png" alt="Fuel Delivery" class="new__img">
+            
+                                <div class="new__data">
+                                    <h3 class="new__title">Fuel Delivery</h3>
+                                    <span class="new__price">Quick and reliable</span>
+                                </div>
+            
+                                <button class="button new__button"><a href="fuelDelivery.html" style="text-decoration: none;color: white;">Book Now</a> </button>
+                            </article>
+            
+                            <article class="new__card swiper-slide">
+                                <span class="new__tag">Service</span>
+            
+                                <img src="assets/img/roadside_assistance.png" alt="Roadside Assistance" class="new__img">
+            
+                                <div class="new__data">
+                                    <h3 class="new__title">Roadside Assistance</h3>
+                                    <span class="new__price">Help when you're stranded</span>
+                                </div>
+            
+                                <button class="button new__button">Book Now</button>
+                            </article>
+            
+                            <article class="new__card swiper-slide">
+                                <span class="new__tag">Service</span>
+            
+                                <img src="assets/img/spare_parts.png" alt="Spare Parts" class="new__img">
+            
+                                <div class="new__data">
+                                    <h3 class="new__title">Spare Parts</h3>
+                                    <span class="new__price">Genuine parts available</span>
+                                </div>
+            
+                                <button class="button new__button">Order Now</button>
+                            </article>
+            
+                            <article class="new__card swiper-slide">
+                                <span class="new__tag">Service</span>
+            
+                                <img src="assets/img/towing_service.png" alt="Towing Service" class="new__img">
+            
+                                <div class="new__data">
+                                    <h3 class="new__title">Towing Service</h3>
+                                    <span class="new__price">Reliable towing when needed</span>
+                                </div>
+            
+                                <button class="button new__button">Request Service</button>
+                            </article>                       
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+
+            <!--==================== NEWSLETTER ====================-->
+            <section class="newsletter section container">
+                <div class="newsletter__bg grid">
+                    <div>
+                        <h2 class="newsletter__title">Subscribe Our <br> Newsletter</h2>
+                        <p class="newsletter__description">
+                            Don't miss out on your discounts. Subscribe to our email 
+                            newsletter to get the best offers, discounts, coupons, 
+                            gifts and much more.
+                        </p>
+                    </div>
+
+                    <form action="" class="newsletter__subscribe">
+                        <input type="email" placeholder="Enter your email" class="newsletter__input">
+                        <button class="button">
+                            SUBSCRIBE
+                        </button>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <!--==================== FOOTER ====================-->
+        <!-- <footer class="footer section">
+            <div class="footer__container container grid">
+                <div class="footer__content">
+                    <h3 class="footer__title">Our information</h3>
+
+                    <ul class="footer__list">
+                        <li>1234 - Peru</li>
+                        <li>La Libertad 43210</li>
+                        <li>123-456-789</li>
+                    </ul>
+                </div>
+                <div class="footer__content">
+                    <h3 class="footer__title">About Us</h3>
+
+                    <ul class="footer__links">
+                        <li>
+                            <a href="#" class="footer__link">Support Center</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer__link">Customer Support</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer__link">About Us</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer__link">Copy Right</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Product</h3>
+
+                    <ul class="footer__links">
+                        <li>
+                            <a href="#" class="footer__link">Road bikes</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer__link">Mountain bikes</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer__link">Electric</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer__link">Accesories</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Social</h3>
+
+                    <ul class="footer__social">
+                        <a href="https://www.facebook.com/" target="_blank" class="footer__social-link">
+                            <i class='bx bxl-facebook'></i>
+                        </a>
+
+                        <a href="https://twitter.com/" target="_blank" class="footer__social-link">
+                            <i class='bx bxl-twitter' ></i>
+                        </a>
+
+                        <a href="https://www.instagram.com/" target="_blank" class="footer__social-link">
+                            <i class='bx bxl-instagram' ></i>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+
+            <span class="footer__copy"> All rigths reserved</span>
+        </footer> -->
+        <footer class="footer section" id="contact">
+            <div class="footer__container container grid">
+                <div class="footer__content">
+                    <h3 class="footer__title">Contact Us</h3>
+                    <ul class="footer__list">
+                        <li>1234 - Gudlavalleru</li>
+                        <li>Andhra Pradesh, 56789</li>
+                        <li>123-456-7890</li>
+                        <li>vheel@gmail.com</li>
+                    </ul>
+                </div>
+        
+                <div class="footer__content">
+                    <h3 class="footer__title">About Us</h3>
+                    <ul class="footer__links">
+                        <li><a href="#" class="footer__link">About Our Services</a></li>
+                        <li><a href="#" class="footer__link">How It Works</a></li>
+                        <li><a href="#" class="footer__link">Our Story</a></li>
+                        <li><a href="#" class="footer__link">Careers</a></li>
+                    </ul>
+                </div>
+        
+                <div class="footer__content">
+                    <h3 class="footer__title">Services</h3>
+                    <ul class="footer__links">
+                        <li><a href="#" class="footer__link">Fuel Delivery</a></li>
+                        <li><a href="#" class="footer__link">Roadside Assistance</a></li>
+                        <li><a href="#" class="footer__link">Spare Parts</a></li>
+                        <li><a href="#" class="footer__link">Towing Services</a></li>
+                    </ul>
+                </div>
+        
+                <div class="footer__content">
+                    <h3 class="footer__title">Follow Us</h3>
+                    <ul class="footer__social">
+                        <a href="https://www.facebook.com/" target="_blank" class="footer__social-link">
+                            <i class='bx bxl-facebook'></i>
+                        </a>
+                        <a href="https://twitter.com/" target="_blank" class="footer__social-link">
+                            <i class='bx bxl-twitter'></i>
+                        </a>
+                        <a href="https://www.instagram.com/" target="_blank" class="footer__social-link">
+                            <i class='bx bxl-instagram'></i>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+        
+            <span class="footer__copy">© 2024 VHEEL. All rights reserved.</span>
+        </footer>
+        
+
+        <!--=============== SCROLL UP ===============-->
+        <a href="#" class="scrollup" id="scroll-up"> 
+            <i class='bx bx-up-arrow-alt scrollup__icon' ></i>
+        </a>
+
+        <!--=============== SWIPER JS ===============-->
+        <script src="assets/js/swiper-bundle.min.js"></script>
+
+        <!--=============== MAIN JS ===============-->
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>
